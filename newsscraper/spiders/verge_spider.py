@@ -19,9 +19,9 @@ class VergeSpider(CrawlSpider):
   name = "verge"
   start_urls = ['https://www.theverge.com']
 
-  # TODO: /news/ or /blogs/
   rules = (
-    Rule(LinkExtractor(restrict_xpaths=r'//a[starts-with(@href, "https://www.theverge.com/202")]'), callback='parse_item'),
+    Rule(LinkExtractor(restrict_xpaths=r'//a[starts-with(@href, \
+      "https://www.theverge.com/202")]'), callback='parse_item'),
   )
 
   def parse_item(self, response):
