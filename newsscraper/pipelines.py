@@ -18,6 +18,6 @@ class NewsscraperPipeline:
         self.file.close()
 
     def process_item(self, item, spider):
-        if item['title'] not in BANNED_TITLES:
+        if 'title' in item and item['title'] not in BANNED_TITLES:
             self.csvwriter.writerow(dict(item))
             return item

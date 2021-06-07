@@ -23,7 +23,6 @@ class DanvilleSanRamonLoader(ItemLoader):
   text_out = Join(" ")
 
 class QuotesSpider(CrawlSpider):
-  CLOSESPIDER_ITEMCOUNT = 1
   name = "danvillesanramon"
   start_urls = ['https://www.danvillesanramon.com/news/recent_headlines.php']
 
