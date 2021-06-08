@@ -9,6 +9,6 @@ import scrapy
 
 
 class NewsItem(scrapy.Item):
-    title = scrapy.Field()
-    text = scrapy.Field()
-    title_hash = scrapy.Field()
+  title = scrapy.Field()
+  text = scrapy.Field()
+  title_hash = scrapy.Field()
