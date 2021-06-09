@@ -9,7 +9,7 @@ BANNED_TITLES = set(['Stay informed.'])
 class NewsscraperPipeline:
 
 	def open_spider(self, spider):
-		datestring = date.today().strftime("%d%m%y")
+		datestring = date.today().strftime("%m%d%y")
 		path = datestring + spider.name + ".csv"
 		self.file = open(path, 'a+')
 		self.csvwriter = DictWriter(self.file, 
